@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {RegisterComponent} from './register/register.component';
 import {HeaderLoginComponent} from './header/header-login/header-login.component';
+import {HeaderMenuComponent} from './header/header-menu/header-menu.component';
 
 const routes: Routes = [
   {path: 'inventaris', component: InventarisComponent},
@@ -35,7 +36,8 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
     RegisterComponent,
-    HeaderLoginComponent
+    HeaderLoginComponent,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,
