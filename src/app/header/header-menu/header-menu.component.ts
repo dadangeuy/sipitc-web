@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {SessionStorage} from 'ngx-store';
+import {User} from '../../model/User';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
@@ -6,11 +9,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header-menu.component.sass']
 })
 export class HeaderMenuComponent implements OnInit {
+  @SessionStorage({key: 'user'}) user: User;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
   }
 
+  onLogout() {
+    this.user = null;
+    this.router.navigate(['']);
+  }
 }

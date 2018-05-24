@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import {RegisterComponent} from './register/register.component';
 import {HeaderLoginComponent} from './header/header-login/header-login.component';
 import {HeaderMenuComponent} from './header/header-menu/header-menu.component';
+import {WebStorageModule} from 'ngx-store';
 
 const routes: Routes = [
   {path: 'inventaris', component: InventarisComponent},
@@ -43,7 +44,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    WebStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {SessionStorage} from 'ngx-store';
+import {User} from '../model/User';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  @SessionStorage({key: 'user'}) user: User = null;
 
   constructor() {
   }
@@ -13,4 +16,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  isLoggedIn(): boolean {
+    return this.user != null;
+  }
 }

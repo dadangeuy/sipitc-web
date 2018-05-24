@@ -3,7 +3,7 @@
     <!-- /.box-header -->
     <!-- form start -->
     <div class="card-body">
-      <form>
+      <form (submit)="attemptLogin($event.target[0].value, $event.target[1].value)">
         <div class="form-group row">
           <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -33,11 +33,9 @@
 
         <div class="form-group row mb-0">
           <div class="col-md-12">
-
-            <!--                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                {{ __('Forgot Your Password?') }}
-                                            </a>
-            -->
+            <a class="btn btn-link" href="forget-password">
+              Forgot Your Password?
+            </a>
             <button type="submit" class="btn btn-success btn-md">
               Login
             </button>
