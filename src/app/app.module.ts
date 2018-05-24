@@ -16,6 +16,7 @@ import {RegisterComponent} from './register/register.component';
 import {HeaderLoginComponent} from './header/header-login/header-login.component';
 import {HeaderMenuComponent} from './header/header-menu/header-menu.component';
 import {WebStorageModule} from 'ngx-store';
+import {LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: InventarisComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'peminjaman/:id', component: PeminjamanComponent},
   {path: 'tentang', component: TentangComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'logout', component: LogoutComponent},
   {path: 'register', component: RegisterComponent}
 ];
 
@@ -38,7 +40,8 @@ const routes: Routes = [
     HeaderComponent,
     RegisterComponent,
     HeaderLoginComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

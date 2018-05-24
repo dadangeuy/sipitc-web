@@ -16,10 +16,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.user != null) {
-      this.user = null;
-      this.router.navigate(['login']);
-    }
   }
 
   attemptLogin(nrp, password) {

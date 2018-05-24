@@ -4,22 +4,20 @@ import {User} from '../model/User';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.sass']
+  selector: 'app-logout',
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.sass']
 })
-export class HeaderComponent implements OnInit {
+export class LogoutComponent implements OnInit {
   @SessionStorage({key: 'user'}) user: User = null;
 
   constructor(private router: Router) {
   }
 
   ngOnInit() {
-    const path = this.router.url;
-    console.log(path);
+    this.user = null;
+    this.router.navigate(['login']);
+    this.user = null;
   }
 
-  isLoggedIn(): boolean {
-    return this.user != null;
-  }
 }
