@@ -2,17 +2,18 @@
   <h3>List Inventaris</h3>
   <br>
   <h4>Laboratorium:</h4>
-  <select title="LabIn" class="form-control select2" style="width: 10%;">
-    <option selected="selected" value="">RPL</option>
-    <option value="ncc">NCC</option>
-    <option>KCV</option>
-    <option>LP</option>
-    <option>AJK</option>
-    <option>IGS</option>
-    <option>MIS</option>
-    <option>LP 2</option>
-    <option>Alpro</option>
-    <option>MI</option>
+  <select title="LabIn" class="form-control select2" style="width: 10%;" (change)="selectLab($event.target.value)">
+    <option selected disabled hidden>Pilih Lab</option>
+    <option value="RPL">RPL</option>
+    <option value="NCC">NCC</option>
+    <option value="KCV">KCV</option>
+    <option value="LP">LP</option>
+    <option value="AJK">AJK</option>
+    <option value="IGS">IGS</option>
+    <option value="MIS">MIS</option>
+    <option value="LP 2">LP 2</option>
+    <option value="ALPRO">ALPRO</option>
+    <option value="MI">MI</option>
   </select>
   <br>
 

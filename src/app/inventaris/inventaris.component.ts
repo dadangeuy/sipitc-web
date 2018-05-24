@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LabInventoryService} from '../services/lab-inventory.service';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {Inventory} from '../model/Inventory';
 
 @Component({
@@ -9,12 +9,15 @@ import {Inventory} from '../model/Inventory';
   styleUrls: ['./inventaris.component.sass']
 })
 export class InventarisComponent implements OnInit {
-  inventoryData$: Observable<Array<Inventory>> = this.service.getInventory('dummy_frieda');
+  inventoryData$: Observable<Array<Inventory>> = of([]);
 
   constructor(private service: LabInventoryService) {
   }
 
   ngOnInit() {
+  }
 
+  selectLab(labName) {
+    this.inventoryData$ = this.service.getInventory(labName);
   }
 }
