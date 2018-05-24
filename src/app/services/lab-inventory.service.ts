@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {RailsResponse} from '../model/RailsResponse';
 import {Inventory} from '../model/Inventory';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
