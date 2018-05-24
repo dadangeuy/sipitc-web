@@ -28,7 +28,6 @@ export class PeminjamanComponent implements OnInit {
     reservation.start_date = start_date;
     reservation.end_date = end_date;
     reservation.reason = reason;
-    console.log(reservation);
-    this.service.submitReservation(reservation).subscribe(value => console.log(value));
+    this.service.submitReservation(reservation).subscribe(() => alert('Reservasi Berhasil'));
   }
 }

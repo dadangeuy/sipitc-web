@@ -23,9 +23,9 @@ export class RegisterComponent implements OnInit {
       user.email = email;
       user.phone_number = phone;
       user.password = password;
-      this.service.attemptRegister(user).subscribe(value => {
-        console.log(value);
-      });
+      this.service.attemptRegister(user).subscribe(() => alert('Register Berhasil'));
+    } else {
+      alert('Password Tidak Sama');
     }
   }
 }
