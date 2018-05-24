@@ -39,8 +39,8 @@
                 <td>{{inventory.spec}}</td>
                 <td>{{inventory.status}}</td>
                 <td>
-                  <a href="peminjaman">
-                    <button type="submit" class="btn btn-success btn-sm"><i>Pinjam</i></button>
+                  <a href="peminjaman/{{inventory.id}}">
+                    <button class="btn btn-success btn-sm"><i>Pinjam</i></button>
                   </a>
                 </td>
               </tr>
@@ -55,107 +55,6 @@
               </tr>
               </tfoot>
             </table>
-          </div>
-          <div id="detail-rintu" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h4 class="modal-title">Edit Rincian Tugas</h4>
-                </div>
-                <div class="modal-body">
-                  <form class="form-horizontal form-material">
-                    <div class="form-group">
-                      <div class="col-md-12 m-b-20">
-                        <button type="button" class="btn btn-info btn-rounded m-b-20" data-toggle="modal"
-                                data-target="#add-rintu">Tambah Rincian Tugas
-                        </button>
-                        <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0">
-                          <thead>
-                          <tr>
-                            <th width="3%">No</th>
-                            <th width="35%">Rincian Tugas</th>
-                            <th width="45%">Deskripsi</th>
-                            <th width="17%">Action</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td width="3%">1</td>
-                            <td width="35%">
-                              Nyapu Lantai
-                            </td>
-                            <td style="word-wrap:break-word;min-width:45%;max-width:45%;">Menyapu seluruh lantai dengan
-                              bersih sampai kinclong bangettt sampe semut kalo jalan bisa kepleset
-                            </td>
-                            <td width="17%">
-                              <button type="button" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i
-                                class="ti-pencil-alt" data-toggle="modal" data-target="#edit-rintu"></i></button>
-                              <button type="button" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i
-                                class="ti-trash"></i></button>
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                  <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="add-rintu" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h4 class="modal-title">Tambah Rincian Tugas</h4></div>
-                <div class="modal-body">
-                  <form class="form-horizontal form-material">
-                    <div class="form-group">
-                      <div class="col-md-12 m-b-20">
-                        <input type="text" class="form-control" placeholder="Rincian Tugas"></div>
-                      <div class="col-md-12 m-b-20">
-                        <input type="text" class="form-control" placeholder="Deskripsi"></div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                  <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="edit-rintu" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                  <h4 class="modal-title">Edit Rincian Tugas</h4></div>
-                <div class="modal-body">
-                  <form class="form-horizontal form-material">
-                    <div class="form-group">
-                      <div class="col-md-12 m-b-20">
-                        <input type="text" class="form-control" placeholder="Rincian Tugas"></div>
-                      <div class="col-md-12 m-b-20">
-                        <input type="text" class="form-control" placeholder="Deskripsi"></div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
-                  <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
