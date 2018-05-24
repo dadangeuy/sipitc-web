@@ -23,7 +23,7 @@ export class PeminjamanComponent implements OnInit {
     const inventory_id = this.route.snapshot.params['id'];
     const nrp = this.user.nrp;
     const reservation = new Reservation();
-    reservation.inventory_id = inventory_id;
+    reservation.inventory = inventory_id;
     reservation.nrp = nrp;
     reservation.start_date = start_date;
     reservation.end_date = end_date;

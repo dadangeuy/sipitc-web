@@ -1,5 +1,5 @@
 export class Reservation {
-  inventory_id: number;
+  inventory: number;
   nrp: string;
   start_date: string;
   end_date: string;

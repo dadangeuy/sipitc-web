@@ -18,7 +18,7 @@ import {HeaderMenuComponent} from './header/header-menu/header-menu.component';
 import {WebStorageModule} from 'ngx-store';
 
 const routes: Routes = [
-  {path: 'inventaris', component: InventarisComponent},
+  {path: '', pathMatch: 'full', component: InventarisComponent},
   {path: 'kontak', component: KontakComponent},
   {path: 'peminjaman/:id', component: PeminjamanComponent},
   {path: 'tentang', component: TentangComponent},
