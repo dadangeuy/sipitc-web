@@ -12,13 +12,16 @@ import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {RegisterComponent} from './register/register.component';
+import {HeaderLoginComponent} from './header/header-login/header-login.component';
 
 const routes: Routes = [
   {path: 'inventaris', component: InventarisComponent},
   {path: 'kontak', component: KontakComponent},
   {path: 'peminjaman', component: PeminjamanComponent},
   {path: 'tentang', component: TentangComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
@@ -30,7 +33,9 @@ const routes: Routes = [
     KontakComponent,
     LoginComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent,
+    HeaderLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,4 +46,5 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
