@@ -10,6 +10,7 @@ import {LoginComponent} from './login/login.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'inventaris', component: InventarisComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
