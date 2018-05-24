@@ -22,4 +22,9 @@ export class UserService {
       .get<RailsResponse>(url, {headers: headers})
       .pipe(map(value => value.body));
   }
+
+  attemptRegister(user: User): Observable<RailsResponse> {
+    return this.http
+      .post<RailsResponse>(this.api, user);
+  }
 }
