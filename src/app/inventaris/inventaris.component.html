@@ -32,8 +32,8 @@
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let inventory of inventoryData$ | async">
-                <td>2</td>
+              <tr *ngFor="let inventory of inventoryData$ | async; index as i">
+                <td>{{i + 1}}</td>
                 <td>{{inventory.name}}</td>
                 <td>{{inventory.spec}}</td>
                 <td>{{inventory.status}}</td>
