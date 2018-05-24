@@ -6,13 +6,13 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class LabInventoryService {
-  private baseUrl = 'https://siri-tc.herokuapp.com';
+  private api = 'https://siri-tc.herokuapp.com/laboratory';
 
   constructor(private http: HttpClient) {
   }
 
   getInventory(labName: string): Observable<Object> {
-    const api = `${this.baseUrl}/laboratory/${labName}`;
-    return this.http.get(api);
+    const url = `${this.api}/${labName}`;
+    return this.http.get(url);
   }
 }
