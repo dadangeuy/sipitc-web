@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./logout.component.sass']
 })
 export class LogoutComponent implements OnInit {
-  @SessionStorage({key: 'user'}) user: User = null;
+  @SessionStorage({key: 'user'}) user: User;
 
   constructor(private router: Router) {
   }

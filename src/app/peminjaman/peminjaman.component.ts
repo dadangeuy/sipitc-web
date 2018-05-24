@@ -11,7 +11,7 @@ import {ReservationService} from '../services/reservation.service';
   styleUrls: ['./peminjaman.component.sass']
 })
 export class PeminjamanComponent implements OnInit {
-  @SessionStorage({key: 'user'}) user: User = null;
+  @SessionStorage({key: 'user'}) user: User;
 
   constructor(private route: ActivatedRoute, private service: ReservationService) {
   }

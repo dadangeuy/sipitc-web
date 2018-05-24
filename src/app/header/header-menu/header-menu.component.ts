@@ -16,9 +16,4 @@ export class HeaderMenuComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onLogout() {
-    this.user = null;
-    this.router.navigate(['']);
-  }
 }
