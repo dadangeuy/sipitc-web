@@ -32,11 +32,11 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td>1</td>
-                <td>PC 1</td>
-                <td>CPU: Intel Core i7 <br> OS: Linux <br> RAM: 8GB</td>
-                <td><span class="label label-danger">Belum dipinjam</span></td>
+              <tr *ngFor="let inventory of inventoryData$ | async">
+                <td>2</td>
+                <td>{{inventory.name}}</td>
+                <td>{{inventory.spec}}</td>
+                <td>{{inventory.status}}</td>
                 <td>
                   <a href="peminjaman">
                     <button type="submit" class="btn btn-success btn-sm"><i>Pinjam</i></button>
