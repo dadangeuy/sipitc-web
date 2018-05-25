@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   attemptLogin(nrp, password) {
     this.service.attemptLogin(nrp, password).subscribe(value => {
       this.user = value;
-      this.router.navigate(['/']);
+      this.router.navigate(['inventaris']);
     });
   }
 }

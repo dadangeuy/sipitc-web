@@ -19,10 +19,11 @@ import {WebStorageModule} from 'ngx-store';
 import {LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: InventarisComponent},
+  {path: 'inventaris', component: InventarisComponent},
   {path: 'kontak', component: KontakComponent},
   {path: 'peminjaman/:id', component: PeminjamanComponent},
   {path: 'tentang', component: TentangComponent},
+  {path: '', pathMatch: 'full', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'register', component: RegisterComponent}
